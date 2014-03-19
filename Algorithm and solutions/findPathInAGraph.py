@@ -33,11 +33,25 @@ def find_all_paths(graph, start, end, path=[]): # notice the default value for t
 				paths.append(newpath)
 	return paths
 
+def find_shortest_path(graph, start, end, path=[]): # notice the default value for the function Love python for that
+	path = path + [start] # start from the node
+	if(start == end):
+		return path
+	if not graph.has_key(start):
+		return None #invalid graph
+	shortest = None
+	for node in graph[start]:
+		if node not in path:
+			newpath = find_path(graph,node,end,path)
+			if not shortest or len(newpath) < len(shortest):
+				shortest = newpath
+	return shortest
 
 
 def main():
 	print(find_path(graph,'A', 'D'))
 	print(find_all_paths(graph,'A', 'D'))
+	print(find_shortest_path(graph,'A', 'D'))
 
 
 if __name__ == '__main__':
