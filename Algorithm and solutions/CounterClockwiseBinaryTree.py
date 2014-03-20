@@ -46,14 +46,14 @@ class BinaryTree:
 
 
 def constructTree():
-			tree = BinaryTree(1)
-			tree.left = BinaryTree(2)
-			tree.right = BinaryTree(3)
-			tree.left.left = BinaryTree(4)
-			tree.left.right = BinaryTree(5)
-			tree.right.left = BinaryTree(6)
-			tree.right.right = BinaryTree(7)		
-			tree.printBoundaryOfaTree()
+	tree = BinaryTree(1)
+	tree.left = BinaryTree(2)
+	tree.right = BinaryTree(3)
+	tree.left.left = BinaryTree(4)
+	tree.left.right = BinaryTree(5)
+	tree.right.left = BinaryTree(6)
+	tree.right.right = BinaryTree(7)		
+	tree.printBoundaryOfaTree()
 
 def main():
 	constructTree() 
